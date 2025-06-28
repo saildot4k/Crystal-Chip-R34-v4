@@ -23,6 +23,63 @@ Late CC1.1/CC.1.2 and CC 2.0 can be upgraded to a 4MB DataFlash (AT45DB321D- S o
 
 Release History:
 
+Release 34 V4 by R3Z3N 6/27/2025
+    Fixes/Changes:
+
+        - SAS (Save Application Support) updated (and probably finalized). There is a script in BM/SCRIPTS/BMRTFLDR.PBT (BootManager Root Folder) \
+            where root folders must be defined, similiar to how FMCB, PS2BBL and OSDMenu also need to define where apps are. 
+            Edit as neeeded to add new folders, delete unneeded folders as necessary. To update, place file on root of
+            any device that you have device drivers installed for. Simply run BootManager, Application Browser and RUN/INSTALL/REMOVE
+            for said device and BootManager will copy the file where it needs to go and SHOULD remove the script from root of said device.
+            If not please manually delete with another app or PC. Simply grab a file from ps2wiki.github.io and drop to root of memory card
+            (once APPINFO.PBT is included with said app)
+        
+        - Powershell script to create APPINFO.PBT if title.cfg exists. APPINFO is now much more friendly for user, and allows device specific compatibily options
+
+        - Added option to show directories when browsing for APPS, Devices and Themes
+
+        - Added options to confirm Remove and Install apps/devices and themes which also recalls directory and appname when browsing so you do
+            not loose track of which app you were installing or removing.
+
+        - Device Manager now shows which device drivers are installed. Inform users when device drivers are missing such as when FTP is installed but NET 
+            is missing. SCPH-75K and later will inform user if HDD driver is unneeded
+
+        - Configuration Menus hide or inform users when device drivers are missing. For example NET/FTP/HOST and HDD. If net is missing, FTP and HOST
+            inform user NET is missing as that is the backing driver. 
+
+        - Added ability to hide apps for RUN/INSTALL/REMOVE. Reference BM/APPS/OSDSYS/APPINFO.PBT or BM/APPS/BM/APPINFO.PBT
+
+        - BootManager updates mc:/SYS-CONF/IPCONFIG.DAT if it exists so that your suite of apps that call your network config stay "synced"
+
+        - BootManager Installer updated. Allows choosing device drivers before installing and checks if drivers are on source device.
+            Informs user of Min/Max install just in case CC2.0/SLE users want to save space. Should fit on all 2.0 Models with full install.
+            Warns user if critical or non critical files are not installed. Non critical files continues installing (such as missing icons)
+            CC2.0 Installs no longer install other CC1.0 FW to flash to save more space.
+
+        - 2 Tutorials under Configuration Menu so that users cannot forget hw to update defined root folders, as well as how to use hotkeys.
+
+        - Added French Language thanks to Wanderer!
+
+        - Added Many more themes, 31 in total now. Still need to edit colors for font/title/menu/background. Please inform me if PAL, VGA or 480p
+            alignment needs fixing and what your values are.
+
+        - Fixed bug that "Medias" scripts would never be called
+
+        - Memory Card Manager hides devices that may not be inserted
+
+        - Easter Egg in menus.....
+
+        - Besides themes and apps, this is probably the last update unless I figure out how to show which hotkeys are assigned to what application
+            or god forbid any bugs I may have left. I may consolidate scripts if possible later.
+
+        - OLD APPINFO.PBT is still supported under BM/APPS/ however all the SAS compliant scripts are updated. I recommend using those going forward.
+
+        To Do:
+
+        - Help Ripto create title.cfg for his AIO  (ALL IN ONE) app repository
+
+        - Bundle the new apps for the MegaPack as they are added to ps2wiki.github.io
+
 Release 34 V4 by R3Z3N 5/17/2025
     Fixes/Changes
         - SAS (Save Application Support) added as best as possible. Apps can be installed to:
