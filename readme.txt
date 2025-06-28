@@ -5,7 +5,6 @@ Crystal Chips website defunct and sqautter took it - http://www.crystal-chips.co
 
 # Please head to [PS2 Modchip Tutorials](https://ps2modchiptutorials.com) for latest info!
 
-This is the Crystal Chips software release 34 v3 by R3Z3N April 29th 2025
 A quick look at some updates which is a little old now:
 https://youtu.be/DDvfIPtA8JQ?si=yaUC7vgGEmerZ9iM
 
