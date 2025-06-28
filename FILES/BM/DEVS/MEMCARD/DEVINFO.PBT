@@ -13,16 +13,16 @@ RETURN -1
 
 :IF_QUERY
     IF EXISTS "mc0:/"
-        IF NOT MATCHES "mc0:/*"  "$ARG6$"
-	        ADDWIDGET "CALL" "$TITLE$ 1" "$BM.TXT_MC_DESC$ 1" $ARG2$ "mc0" "$ARG3$" "$ARG4$" "$ARG5$"
-        ELSEIF MATCHES "mc0:/*"  "$ARG6$"
+        IF NOT MATCHES "mc0:/*"  "$ARG3$"
+	        ADDWIDGET "CALL" "$TITLE$ 1" "$BM.TXT_MC_DESC$ 1" $ARG2$ "mc0" "$ARG3$" "$ARG4$" "$ARG5$" "$ARG6$" "$ARG7$" "$ARG8$" "$ARG9$" "$ARG10$" "$ARG11$"
+        ELSEIF MATCHES "mc0:/*"  "$ARG3$"
             ADDWIDGET LABEL "$TITLE$ 1-$BM.TXT_NO_INSTALL$"
         ENDIF
     ENDIF
     IF EXISTS "mc1:/"
-        IF NOT MATCHES "mc1:/*"  "$ARG6$"
-            ADDWIDGET "CALL" "$TITLE$ 2" "$BM.TXT_MC_DESC$ 2" $ARG2$ "mc1" "$ARG3$" "$ARG4$" "$ARG5$"
-        ELSEIF MATCHES "mc1:/*"  "$ARG6$"
+        IF NOT MATCHES "mc1:/*"  "$ARG3$"
+            ADDWIDGET "CALL" "$TITLE$ 2" "$BM.TXT_MC_DESC$ 2" $ARG2$ "mc1" "$ARG3$" "$ARG4$" "$ARG5$" "$ARG6$" "$ARG7$" "$ARG8$" "$ARG9$" "$ARG10$" "$ARG11$"
+        ELSEIF MATCHES "mc1:/*"  "$ARG3$"
             ADDWIDGET LABEL "$TITLE$ 2-$BM.TXT_NO_INSTALL$"
         ENDIF
     ENDIF

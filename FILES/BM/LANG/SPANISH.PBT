@@ -1,11 +1,11 @@
 # English translation of Crystal Chips BootManager menu for BMMENUS.PBT v1.4
-# Only intended to use with the R34 modified v3+ release by R3Z3N.
+# Only intended to use with the R34 modified v4+ release by R3Z3N.
 
 # Check the menu script version to be sure this script supports it.
 IF NEQ "$BM.MENU_MAJOR_VER$" "1"
     ECHO "Versión de menú no compatible v$BM.MENU_MAJOR_VER$.$BM.MENU_MINOR_VER$!"
     EXIT 0
-ELSEIF NEQ "$BM.MENU_MINOR_VER$" "4"
+ELSEIF NEQ "$BM.MENU_MINOR_VER$" "5"
     ECHO "Versión de menú no compatible v$BM.MENU_MAJOR_VER$.$BM.MENU_MINOR_VER$!"
     EXIT 0
 ENDIF
@@ -34,7 +34,7 @@ RETURN -1
     EXIT 0
 
 :LOAD
-ECHO "Cargando texto en inglés..."
+ECHO "Cargando texto en espanol..."
 
 # Miscellaneous
 SET "BM.TXT_YES" "Sí"
@@ -89,11 +89,6 @@ SET "BM.TXT_MAIN_MENU" "Main Menu"
 # Install BootManager
 SET "BM.TXT_INST_BM" "Instalar BootManager"
 SET "BM.TXT_HINT_INST_BM" "Instalar BootManager."
-SET "BM.TXT_CHOOSE_INST_BM" "Elegir opción de instalación"
-SET "BM.TXT_FULL" "Completa"
-SET "BM.TXT_HINT_FULL" "Instalar BootManager con todos los controladores de dispositivos."
-SET "BM.TXT_MINIMAL" "Mínima"
-SET "BM.TXT_HINT_MINIMAL" "Instalar BootManager sin controladores de dispositivos adicionales para USB, HDD y red."
 SET "BM.TXT_INSTALL_BM_TO" "Instalar BootManager en..."
 
 # Firmware Manager
@@ -153,15 +148,18 @@ SET "BM.TXT_RUN_AVAIL" "Ejecutable en"
 SET "BM.TXT_RUN_UNAVAIL" "¡No se puede ejecutar desde el dispositivo!"
 
 # Install Application Browser
-SET "BM.TXT_HINT_INSTALL_APP" "Instalar una aplicación desde un dispositivo a otro".
+SET "BM.TXT_HINT_INSTALL_APP" "Instalar una aplicación de un dispositivo a otro."
 SET "BM.TXT_INSTALL_APP_FROM" "Instalar aplicación(es) desde"
 SET "BM.TXT_INSTALL_APP_TO" "Instalar aplicación en"
 SET "BM.TXT_NO_INSTALL" "¡No se puede instalar en el mismo dispositivo!"
-SET "BM.TXT_NO_INSTALL_CDROM" "¡No se puede instalar en CD/DVD!"
+SET "BM.TXT_NO_INSTALL_DEV" "¡No se puede instalar en el dispositivo!"
 
 # Remove Application Browser
 SET "BM.TXT_HINT_REMOVE_APP" "Eliminar una aplicación de un dispositivo".
 SET "BM.TXT_REMOVE_APP_FROM" "Eliminar aplicaciones de"
+SET "BM.TXT_NO_REMOVE_DEV" "¡No se puede eliminar del dispositivo!"
+SET "BM.TXT_MISSING" "desaparecido"
+SET "BM.TXT_UNSUPPORTED" "no es compatible con"
 
 # Dev Manager
 SET "BM.TXT_DEV_MANAGER" "Administrador de dispositivos"
@@ -240,6 +238,9 @@ SET "BM.TXT_HINT_HINT_SCROLLBAR" "Activa y desactiva la barra de desplazamiento 
 
 SET "BM.TXT_SCROLLBAR_SPEED" "Velocidad de la barra de desplazamiento de sugerencias"
 SET "BM.TXT_HINT_SCROLLBAR_SPEED" "Establece la velocidad de la barra de desplazamiento de sugerencias."
+
+SET "BM.TXT_APP_DIR" "Directorios del navegador de aplicaciones"
+SET "BM.TXT_HINT_APP_DIR" "Activar y desactivar directorios en el Navegador de aplicaciones"
 
 # Network Configuration Menu
 SET "BM.TXT_NET_CONFIG" "Configuración de red"
@@ -543,5 +544,37 @@ SET "BM.TXT_REM_FAIL" "Error al eliminar"
 SET "BM.TXT_NO_CC" "CrystalChip no compatible"
 SET "BM.TXT_PROGFW_FAIL" "¡Error al programar el archivo de firmware!"
 SET "BM.TXT_PROGFW_DONE" "¡Firmware actualizado exitosamente!"
+
+#Confirm Choices
+SET "BM.TXT_FROM" "de"
+SET "BM.TXT_TO" "a"
+SET "BM.TXT_CONFIRM_REM_INST" "Confirmar Eliminar/Instalar"
+SET "BM.TXT_CONFIRM_REM_INST_HINT" "Solicita Eliminar/Instalar antes de continuar la acción."
+SET "BM.TXT_BOTH" "Ambos"
+
+#Tutorials
+SET "BM.TXT_TUTORIAL" "Tutorial"
+SET "BM.TXT_MENU_HK" "Teclas rápidas"
+SET "BM.TXT_MENU_HK_HINT" "Información de las teclas rápidas R1, R2, L1, L2"
+SET "BM.TXT_TITLE_HK" "Tutorial de Teclas Rápidas"
+SET "BM.TXT_HK_TUTORIAL1" "Para establecer teclas rápidas, presiona SELECT"
+SET "BM.TXT_HK_TUTORIAL2" "en el elemento deseado."
+SET "BM.TXT_HK_TUTORIAL3" "Luego presiona R1, R2, L1, L2,"
+SET "BM.TXT_HK_TUTORIAL4" "TRIÁNGULO, CUADRADO o START."
+SET "BM.TXT_HK_TUTORIAL5" "Confirma con X, Cancela con SELECT."
+SET "BM.TXT_HK_TUTORIAL6" "Para borrar una tecla rápida previamente establecida,"
+SET "BM.TXT_HK_TUTORIAL7" "Presione SELECCIONAR, BOTÓN, SELECCIONAR en el elemento del menú."
+
+SET "BM.TXT_MENU_BMRTFLDR" "Actualizando Carpeta Raíz Definida"
+SET "BM.TXT_MENU_BMRTFLDR_HINT" "Tutorial de actualización de la carpeta raíz"
+SET "BM.TXT_TITLE_BMRTFLDR" "Tutorial BMRTFLDER.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL1" "Edita BM/SCRIPTS/BMRTFLDR.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL2" "según sea necesario para BootManager"
+SET "BM.TXT_BMRTFLDR_TUTORIAL3" "para encontrar aplicaciones en dispositivo:/*"
+SET "BM.TXT_BMRTFLDR_TUTORIAL4" "Una vez hecho, coloca una copia en"
+SET "BM.TXT_BMRTFLDR_TUTORIAL5" "dispositivo:/BMRTFLDER.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL6" "Navegar al dispositivo para la acción"
+SET "BM.TXT_BMRTFLDR_TUTORIAL7" "actualizará y eliminará la fuente."
+SET "BM.TXT_BMRTFLDR_TUTORIAL8" "APPINFO.PBT sigue siendo necesario por APP"
 
 EXIT 0

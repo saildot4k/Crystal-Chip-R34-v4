@@ -13,9 +13,9 @@ RETURN -1
 
 :IF_QUERY
     IF EXISTS "dffs:/"
-        IF NOT MATCHES "dffs:/*"  "$ARG6$"
-            ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_CCFLASH_DESC$" $ARG2$ "dffs" "$ARG3$" "$ARG4$" "$ARG5$"
-        ELSEIF MATCHES "dffs:/*"  "$ARG6$"
+        IF NOT MATCHES "dffs:/*"  "$ARG3$"
+            ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_CCFLASH_DESC$" $ARG2$ "dffs" "$ARG3$" "$ARG4$" "$ARG5$" "$ARG6$" "$ARG7$" "$ARG8$" "$ARG9$" "$ARG10$" "$ARG11$"
+        ELSEIF MATCHES "dffs:/*"  "$ARG3$"
             ADDWIDGET LABEL "$TITLE$-$BM.TXT_NO_INSTALL$"
         ENDIF
     ENDIF
@@ -59,8 +59,8 @@ RETURN -1
 
 :LOADEXEC
     LOADEXEC "EEELF" "$ARG2$" $ARG3$
-    EXIT "0"
+    EXIT 0
 
 :SETEXIT
     SETEXIT "moduleload" "$ARG2$" $ARG3$
-    EXIT "0"
+    EXIT 0

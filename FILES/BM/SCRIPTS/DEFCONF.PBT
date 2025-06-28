@@ -66,6 +66,8 @@ ELSE
 ENDIF
 
 # Common default settings
+SET "S32" "BM.CNF_APPDIR" "1"
+SET "S32" "BM.CNF_REMOVE_INSTALL_CONFIRM" "3"
 SET "S32" "BM.CNF_GS_HOOK_EN" "1"
 SET "S32" "BM.CNF_IGR_EN" "0"
 SET "S32" "BM.CNF_AUTOLOAD_FSD_EN" "1"
@@ -153,6 +155,7 @@ SET "U8" "BM.CNF_NET_SDNS3" "0"
 # Lockout Mode Default PIN. 00 will unlock all features
 SET "U8" "BM.CNF_PIN_NUM0" "0"
 SET "U8" "BM.CNF_PIN_NUM1" "0"
+
 
 # Have all configuration files saved.
 SET "BM.THM_CONFIG_CHANGED" "1"

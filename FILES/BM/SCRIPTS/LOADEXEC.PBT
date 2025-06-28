@@ -21,7 +21,6 @@ ELSE
         ECHO "Unknown device for file '$ARG1$'!"
         RETURN "-1"
     ENDIF
-
     LOADEXEC "PBAT" "$BM.EXEC_DEV_PBT$" "LOADEXEC" "$ARG1$" $ARG2$
 ENDIF
 

@@ -9,22 +9,30 @@ GOTO "$ARG1$"
 RETURN -1
 
 :QUERY
-    ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_MMCE_DESC_1$" $ARG2$ "$ARG0$" "$ARG3$" "$ARG4$" "$ARG5$"
+    ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_MMCE_DESC_1$" $ARG2$ "$ARG0$" "$ARG3$" "$ARG4$" "$ARG5$" "$TITLE$" "$PWD$" "BM/DEVS/MMCE" "BM/DEVS/MMCE"
     RETURN 0
 
 :IF_QUERY
     IF EXISTS "mmce0:/"
-        IF NOT MATCHES "mmce0:/*"  "$ARG6$"
-            ADDWIDGET "CALL" "$TITLE$ 1" "$BM.TXT_MMCE_DESC$ 1" $ARG2$ "mmce0" "$ARG3$" "$ARG4$" "$ARG5$"
-        ELSEIF MATCHES "mmce0:/*"  "$ARG6$"
-            ADDWIDGET LABEL "$TITLE$ 1-$BM.TXT_NO_INSTALL$"
+        IF NOT MATCHES "REMOVE" "$ARG4$"
+            IF NOT MATCHES "mmce0:/*"  "$ARG3$"
+                ADDWIDGET "CALL" "$TITLE$ 1" "$BM.TXT_MMCE_DESC$ 1" $ARG2$ "mmce0" "$ARG3$" "$ARG4$" "$ARG5$" "$ARG6$" "$ARG7$" "$ARG8$" "$ARG9$" "$ARG10$" "$ARG11$"
+            ELSEIF MATCHES "mmce0:/*"  "$ARG3$"
+                ADDWIDGET "LABEL" "$TITLE$ 1-$BM.TXT_NO_INSTALL$"
+            ENDIF
+        ELSEIF  MATCHES "REMOVE" "$ARG4$"
+            ADDWIDGET "LABEL" "$TITLE$ 2-$BM.TXT_NO_REMOVE_DEV$"
         ENDIF
     ENDIF
-    IF EXISTS "mmce1:/"
-        IF NOT MATCHES "mmce1:/*"  "$ARG6$"
-            ADDWIDGET "CALL" "$TITLE$ 2" "$BM.TXT_MMCE_DESC$ 2" $ARG2$ "mmce1" "$ARG3$" "$ARG4$" "$ARG5$"
-        ELSEIF MATCHES "mmce1:/*"  "$ARG6$"
-            ADDWIDGET LABEL "$TITLE$ 2-$BM.TXT_NO_INSTALL$"
+   IF EXISTS "mmce1:/"
+        IF NOT MATCHES "REMOVE" "$ARG4$"
+            IF NOT MATCHES "mmce1:/*"  "$ARG3$"
+                ADDWIDGET "CALL" "$TITLE$ 2" "$BM.TXT_MMCE_DESC$ 2" $ARG2$ "mmce1" "$ARG3$" "$ARG4$" "$ARG5$" "$ARG6$" "$ARG7$" "$ARG8$" "$ARG9$" "$ARG10$" "$ARG11$"
+            ELSEIF MATCHES "mmce1:/*"  "$ARG3$"
+                ADDWIDGET "LABEL" "$TITLE$ 2-$BM.TXT_NO_INSTALL$"
+            ENDIF
+        ELSEIF  MATCHES "REMOVE" "$ARG4$"
+            ADDWIDGET "LABEL" "$TITLE$ 2-$BM.TXT_NO_REMOVE_DEV$"
         ENDIF
     ENDIF
     RETURN 0
@@ -109,3 +117,4 @@ RETURN -1
 :LOADEXEC
     LOADEXEC "EEELF" "moduleload" $BM.DRIVER_DEV_DRIVERS$ "-m $BM.DRIVER_PATH$/IOMANX.IRX" "-m $BM.DRIVER_PATH$/FILEXIO.IRX" "-m $BM.DRIVER_PATH$/MMCEMAN.IRX" "$ARG2$" $ARG3$
     EXIT 0
+    

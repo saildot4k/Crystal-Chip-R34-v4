@@ -9,4 +9,3 @@ ADDR_OSDHOOK            EQU 0x000FF000
 DVDV_CYCLE_TRAY         EQU 1
 
 MECHA_DELAY             EQU 500
-

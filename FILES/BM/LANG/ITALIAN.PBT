@@ -1,11 +1,11 @@
 # Italian translation of Crystal Chips BootManager menu for BMMENUS.PBT v1.4
-# Only intended to use with the R34 modified v3+ release by R3Z3N.
+# Only intended to use with the R34 modified v4+ release by R3Z3N.
 
 # Check the menu script version to be sure this script supports it.
 IF NEQ "$BM.MENU_MAJOR_VER$" "1"
     ECHO "Versione del menu non supportata v$BM.MENU_MAJOR_VER$.$BM.MENU_MINOR_VER$!"
     EXIT 0
-ELSEIF NEQ "$BM.MENU_MINOR_VER$" "4"
+ELSEIF NEQ "$BM.MENU_MINOR_VER$" "5"
     ECHO "Versione del menu non supportata v$BM.MENU_MAJOR_VER$.$BM.MENU_MINOR_VER$!"
     EXIT 0
 ENDIF
@@ -71,7 +71,6 @@ SET "BM.TXT_DVDV" "DVD Video"
 SET "BM.TXT_CDDA" "CD Audio"
 SET "BM.TXT_OTHER" "Altro"
 SET "BM.TXT_NODISC" "Nessun disco"
-
 SET "BM.TXT_LANGUAGE" "Lingua"
 SET "BM.TXT_HINT_BM_LANG" "Imposta la lingua utilizzata da BootManager."
 SET "BM.TXT_INSTALL_LANG" "Installa lingua"
@@ -89,17 +88,11 @@ SET "BM.TXT_MAIN_MENU" "Menu principale"
 # Installa BootManager
 SET "BM.TXT_INST_BM" "Installa BootManager"
 SET "BM.TXT_HINT_INST_BM" "Installa BootManager."
-SET "BM.TXT_CHOOSE_INST_BM" "Scegli opzione di installazione"
-SET "BM.TXT_FULL" "Completo"
-SET "BM.TXT_HINT_FULL" "Installa BootManager con tutti i driver di dispositivo."
-SET "BM.TXT_MINIMAL" "Minimo"
-SET "BM.TXT_HINT_MINIMAL" "Installa BootManager senza driver di dispositivo aggiuntivi per USB, HDD e rete."
 SET "BM.TXT_INSTALL_BM_TO" "Installa BootManager su..."
 
 # Firmware Manager
 SET "BM.TXT_UPG_FIRMWARE" "Aggiorna firmware"
 SET "BM.TXT_HINT_UPG_FIRMWARE" "Aggiorna il firmware CC da questo disco."
-
 SET "BM.TXT_FORMAT_DFFS" "Formatta DFFS"
 SET "BM.TXT_HINT_FORMAT_DFFS" "Formatta flash Crystal Chip."
 SET "BM.TXT_DFFS_REM_BM" "Rimuovi dffs:/BM"
@@ -111,7 +104,6 @@ SET "BM.TXT_HINT_UPG_FW" "Aggiorna il firmware del tuo CrystalChip dal file CCI.
 SET "BM.TXT_ERASE_FW" "Cancella firmware"
 SET "BM.TXT_HINT_ERASE_FW" "Cancella completamente il contenuto della tua flash/EEPROM del CrystalChip."
 SET "BM.TXT_ASK_ERASE_FW" "Sei sicuro di voler cancellare il firmware?"
-
 SET "BM.TXT_FW_TITLE" "Varianti del firmware:"
 SET "BM.TXT_FW_QUESTION" "Da quale interfaccia esegui Boot Manager?"
 SET "BM.TXT_FW_MC0" "1- BM viene eseguito dalla Memory Card 1"
@@ -154,14 +146,17 @@ SET "BM.TXT_RUN_UNAVAIL" "Impossibile eseguire dal dispositivo!"
 
 # Installa browser applicazione
 SET "BM.TXT_HINT_INSTALL_APP" "Installa un'applicazione da un dispositivo a un altro."
-SET "BM.TXT_INSTALL_APP_FROM" "Installa applicazione/i da"
-SET "BM.TXT_INSTALL_APP_TO" "Installa applicazione su"
+SET "BM.TXT_INSTALL_APP_FROM" "Installa l'applicazione/i da"
+SET "BM.TXT_INSTALL_APP_TO" "Installa l'applicazione su"
 SET "BM.TXT_NO_INSTALL" "Impossibile installare sullo stesso dispositivo!"
-SET "BM.TXT_NO_INSTALL_CDROM" "Impossibile installare su CD/DVD!"
+SET "BM.TXT_NO_INSTALL_DEV" "Impossibile installare sul dispositivo!"
 
 # Rimuovi browser applicazione
 SET "BM.TXT_HINT_REMOVE_APP" "Rimuovi un'applicazione da un dispositivo."
 SET "BM.TXT_REMOVE_APP_FROM" "Rimuovi applicazione/i da"
+SET "BM.TXT_NO_REMOVE_DEV" "Impossibile rimuovere dal dispositivo!"
+SET "BM.TXT_MISSING" "mancante"
+SET "BM.TXT_UNSUPPORTED" "non supportato"
 
 # Dev Manager
 SET "BM.TXT_DEV_MANAGER" "Gestione dispositivi"
@@ -195,7 +190,6 @@ SET "BM.TXT_NET_DESC" "Driver di rete PS2"
 # Memory Card Manager
 SET "BM.TXT_MC_MANAGER" "Memory Card Manager"
 SET "BM.TXT_HINT_MC_MANAGER" "Formatta Memory Card, Rimuovi BootManager, ecc."
-
 SET "BM.TXT_MC_REM_ALL_APPS" "Rimuovi tutte le applicazioni"
 SET "BM.TXT_HINT_MC_REM_ALL_APPS" "Rimuovi tutte le applicazioni dalla Memory Card nello slot 1."
 SET "BM.TXT_MC_REM_BOOT" "Rimuovi mc0:/BOOT"
@@ -240,6 +234,9 @@ SET "BM.TXT_HINT_HINT_SCROLLBAR" "Attiva e disattiva la barra di scorrimento sug
 
 SET "BM.TXT_SCROLLBAR_SPEED" "Velocità barra di scorrimento suggerimenti"
 SET "BM.TXT_HINT_SCROLLBAR_SPEED" "Imposta la velocità della barra di scorrimento suggerimenti."
+
+SET "BM.TXT_APP_DIR" "Directory del browser dell'app"
+SET "BM.TXT_HINT_APP_DIR" "Attiva e disattiva le directory nel browser delle applicazioni"
 
 # Menu di configurazione di rete
 SET "BM.TXT_NET_CONFIG" "Configurazione di rete"
@@ -543,5 +540,36 @@ SET "BM.TXT_REM_FAIL" "Impossibile rimuovere"
 SET "BM.TXT_NO_CC" "CrystalChip non supportato"
 SET "BM.TXT_PROGFW_FAIL" "Impossibile programmare il file del firmware!"
 SET "BM.TXT_PROGFW_DONE" "Firmware aggiornato correttamente!"
+
+#Confirm Choices
+SET "BM.TXT_FROM" "da"
+SET "BM.TXT_TO" "a"
+SET "BM.TXT_CONFIRM_REM_INST" "Conferma Rimozione/Installazione"
+SET "BM.TXT_CONFIRM_REM_INST_HINT" "Richiede di Rimuovere/Installare prima di continuare l'azione."
+SET "BM.TXT_BOTH" "Entrambi"
+
+#Tutorials
+SET "BM.TXT_TUTORIAL" "Tutorial"
+SET "BM.TXT_MENU_HK" "Hotkeys"
+SET "BM.TXT_MENU_HK_HINT" "Informazioni sugli Hotkey R1, R2, L1, L2"
+SET "BM.TXT_TITLE_HK" "Tutorial Hotkey"
+SET "BM.TXT_HK_TUTORIAL1" "Per impostare gli hotkey, premi SELECT"
+SET "BM.TXT_HK_TUTORIAL2" "sull'elemento desiderato."
+SET "BM.TXT_HK_TUTORIAL3" "Quindi premi R1, R2, L1, L2,"
+SET "BM.TXT_HK_TUTORIAL4" "TRIANGOLO, QUADRATO o START."
+SET "BM.TXT_HK_TUTORIAL5" "Conferma con X, Annulla con SELECT."
+SET "BM.TXT_HK_TUTORIAL6" "Per cancellare un hotkey precedentemente impostato,"
+SET "BM.TXT_HK_TUTORIAL7" "premere SELEZIONA, PULSANTE, SELEZIONA sulla voce di menu."
+SET "BM.TXT_MENU_BMRTFLDR" "Aggiornamento della cartella radice definita"
+SET "BM.TXT_MENU_BMRTFLDR_HINT" "Tutorial per l'aggiornamento della cartella radice"
+SET "BM.TXT_TITLE_BMRTFLDR" "Tutorial BMRTFLDER.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL1" "Modifica BM/SCRIPTS/BMRTFLDR.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL2" "come necessario per BootManager"
+SET "BM.TXT_BMRTFLDR_TUTORIAL3" "per trovare le app in dispositivo:/*"
+SET "BM.TXT_BMRTFLDR_TUTORIAL4" "Una volta fatto, posiziona una copia in"
+SET "BM.TXT_BMRTFLDR_TUTORIAL5" "dispositivo:/BMRTFLDER.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL6" "La navigazione nel dispositivo per l'azione"
+SET "BM.TXT_BMRTFLDR_TUTORIAL7" "aggiornerà ed eliminerà la sorgente."
+SET "BM.TXT_BMRTFLDR_TUTORIAL8" "APPINFO.PBT è ancora necessario per ogni APP"
 
 EXIT 0

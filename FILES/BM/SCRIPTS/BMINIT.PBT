@@ -28,7 +28,7 @@ ELSEIF MATCHES "host:*" "$PWD$"
     SET "BM.DRIVER_PATH" "host:/BM/SHARED"
     SET "BM.DRIVER_DEV_DRIVERS" ""
 ELSE
-    # Drivers are stored on MC0 (line 36) or device BM is loaded from (line 37) for all other devices.
+    # Drivers are stored on MC0 (line 32) or device BM is loaded from (line 33) for all other devices.
     # SET "BM.DRIVER_PATH" "mc0:/BM/SHARED"
     SET "BM.DRIVER_PATH" "$BM.BM_PATH$/SHARED"
     SET "BM.DRIVER_DEV_DRIVERS" "^"-m rom0:SIO2MAN^" ^"-m rom0:MCMAN^""
@@ -103,20 +103,15 @@ ENDIF
 # HDD(Hard Drive) related init. Disables HDD for v14+ and hides HDD Menu in CONFMENU.PBT
 # This way the same config file can be used betweeen CC 1.x and 2.0 without having to change config file
 
-SET "SPEEDCHIP" "1"
-IF EQU "$BM.BIOS_MAJOR_VER$.$BM.BIOS_MINOR_VER$" "2.20"
-    SET "SPEEDCHIP" "0"
-ELSEIF EQU "$BM.BIOS_MAJOR_VER$.$BM.BIOS_MINOR_VER$" "2.30"
-    SET "SPEEDCHIP" "0"
-ENDIF
-
-IF EQU "$SPEEDCHIP$" "1"
-    ECHO "Has SPEED chip, autoloading HDD if enabled"
+IF LTE "$BM.BIOS_MAJOR_VER$$BM.BIOS_MINOR_VER$" "200"
+    ECHO "BOOTROM 2.00 or lower, checking HDD Autoload..."
     IF EQU "$BM.CNF_AUTO_HDD_EN$" "1"
+        ECHO "HDD autoload enabled!"
         LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADHDD.PBT"
+    ELSEIF EQU "$BM.CNF_AUTO_HDD_EN$" "0"
+        ECHO "HDD autoload disabled!"
     ENDIF
 ENDIF
-
 
 IF EXISTS "$BM.BM_PATH$/CONFIG/MACROS.PBT"
     LOADEXEC "PBAT" "$BM.BM_PATH$/CONFIG/MACROS.PBT"

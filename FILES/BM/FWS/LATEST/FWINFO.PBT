@@ -21,7 +21,7 @@ GOTO "$ARG1$"
     EXIT "0"
 
 :INSTALL
-    # CC1.X FW BM run from MC0,MC1 options. USB/HDD currently broken. The latter boots BM.ELF but cannot load scripts. Uncomment the 2 options below to test.
+    # CC1.X FW BM run from MC0,MC1 options. USB/HDD needs advance user interaction in the correct order... Uncomment the 2 options below to test.
     IF EQU "$BM.CC_MAJOR_VER$" "1"
         SETTITLE "$BM.TXT_FW_TITLE$"
         ADDWIDGET "LABEL" "$BM.TXT_FW_QUESTION$"
@@ -53,6 +53,7 @@ GOTO "$ARG1$"
     ENDIF
 
     RETURN 0
+
 
 :INSTALL_WITH_OPTION
     ECHO "$ARG2$"
@@ -185,6 +186,7 @@ GOTO "$ARG1$"
               MESSAGE "$BM.TXT_PROGFW_DONE$"
                 EXIT "0"
             BREAK
+
 
 :REMOVE
     EXIT "0"

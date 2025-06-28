@@ -9,14 +9,14 @@ GOTO "$ARG1$"
 RETURN -1
 
 :QUERY
-    ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_USB_DESC_1$" $ARG2$ "$ARG0$" "$ARG3$" "$ARG4$" "$ARG5$"
+    ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_USB_DESC_1$" $ARG2$ "$ARG0$" "$ARG3$" "$ARG4$" "$ARG5$" "$TITLE$" "$PWD$" "BM/DEVS/USB" "BM/DEVS/USB"
     RETURN 0
 
 :IF_QUERY    
     IF EXISTS "mass:/"
-        IF NOT MATCHES "mass:/*"  "$ARG6$"
-            ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_USB_DESC$" $ARG2$ "mass" "$ARG3$" "$ARG4$" "$ARG5$"
-        ELSEIF MATCHES "mass:/*"  "$ARG6$"
+        IF NOT MATCHES "mass:/*"  "$ARG3$"
+            ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_USB_DESC$" $ARG2$ "mass" "$ARG3$" "$ARG4$" "$ARG5$" "$ARG6$" "$ARG7$" "$ARG8$" "$ARG9$" "$ARG10$" "$ARG11$"
+        ELSEIF MATCHES "mass:/*"  "$ARG3$"
             ADDWIDGET LABEL "$TITLE$-$BM.TXT_NO_INSTALL$"
         ENDIF
     ENDIF
@@ -91,3 +91,4 @@ RETURN -1
 :LOADEXEC
     LOADEXEC "EEELF" "moduleload" $BM.DRIVER_DEV_DRIVERS$ "-m $BM.DRIVER_PATH$/USBD.IRX" "-m $BM.DRIVER_PATH$/USBHDFSD.IRX" "$ARG2$" $ARG3$
     EXIT 0
+    

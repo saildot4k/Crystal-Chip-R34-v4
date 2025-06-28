@@ -1,3 +1,4 @@
+#
 # Crystal Chip BootManager Events Script v1.0
 # (c) 2005-2006 Crystal Chips
 # http:/www.crystal-chips.com/
@@ -5,6 +6,8 @@
 # This script is called by BootManager when events, such as Button Presses, occur.
 #
 # Do not modify the menu with ADDWIDGET or SETMENU in this script!
+#
+#
 
 # Keep this script resident in memory to speed up calls to it.
 KEEP

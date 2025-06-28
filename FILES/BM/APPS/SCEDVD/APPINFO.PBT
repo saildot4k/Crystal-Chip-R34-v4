@@ -17,15 +17,17 @@ GOTO "$ARG1$"
     EXIT "0"
 
 :QUERY
-    ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_VERSION$: $VERSION$ $BM.TXT_AUTHOR$: $AUTHOR$ $BM.TXT_DESC$: $DESC$" $ARG2$ "$ARG0$" "$ARG3$" "$ARG4$" "$ARG5$" 
-    EXIT "0"
+    IF NOT MATCHES "REMOVE" "$ARG3$"
+        ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_VERSION$: $VERSION$ $BM.TXT_AUTHOR$: $AUTHOR$ $BM.TXT_DESC$: $DESC$" $ARG2$ "$ARG0$" "$ARG3$" "$ARG4$" "$ARG5$" "$TITLE$" "$PWD$" "BM/APPS/SCEDVD" "BM/APPS/SCEDVD"
+    ENDIF
+    EXIT 0
 
 :REMOVE
     EXIT 0
 
 :INSTALL
     COPY "$PWD$" "$ARG2$/SCEDVD"
-    EXIT "0"
+    EXIT 0
 
 :RUN
     SHUTDOWN "MM"
@@ -74,4 +76,4 @@ GOTO "$ARG1$"
 
     ECHO "DVD Player Upgrade found at $MC_ELF$, loading..."
     LOADEXEC "EEELF" "moduleload" "-m rom0:SIO2MAN" "-m rom0:MCMAN" "-m rom0:MCSERV" "-x $MC_ELF$"
-    EXIT "0"
+    EXIT 0

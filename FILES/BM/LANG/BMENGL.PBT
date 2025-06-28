@@ -1,11 +1,11 @@
 # English translation of Crystal Chips BootManager menu for BMMENUS.PBT v1.4
-# Only intended to use with the R34 modified v3+ release by R3Z3N.
+# Only intended to use with the R34 modified v4+ release by R3Z3N.
 
 # Check the menu script version to be sure this script supports it.
 IF NEQ "$BM.MENU_MAJOR_VER$" "1"
     ECHO "Unsupported menu version v$BM.MENU_MAJOR_VER$.$BM.MENU_MINOR_VER$!"
     EXIT 0
-ELSEIF NEQ "$BM.MENU_MINOR_VER$" "4"
+ELSEIF NEQ "$BM.MENU_MINOR_VER$" "5"
     ECHO "Unsupported menu version v$BM.MENU_MAJOR_VER$.$BM.MENU_MINOR_VER$!"
     EXIT 0
 ENDIF
@@ -71,7 +71,6 @@ SET "BM.TXT_DVDV" "DVD Video"
 SET "BM.TXT_CDDA" "CD Audio"
 SET "BM.TXT_OTHER" "Other"
 SET "BM.TXT_NODISC" "No Disc"
-
 SET "BM.TXT_LANGUAGE" "Language"
 SET "BM.TXT_HINT_BM_LANG" "Set the language used by BootManager."
 SET "BM.TXT_INSTALL_LANG" "Install Language"
@@ -89,17 +88,11 @@ SET "BM.TXT_MAIN_MENU" "Main Menu"
 # Install BootManager
 SET "BM.TXT_INST_BM" "Install BootManager"
 SET "BM.TXT_HINT_INST_BM" "Install BootManager."
-SET "BM.TXT_CHOOSE_INST_BM" "Choose Install Option"
-SET "BM.TXT_FULL" "Full"
-SET "BM.TXT_HINT_FULL" "Install BootManager with all device drivers."
-SET "BM.TXT_MINIMAL" "Minimal"
-SET "BM.TXT_HINT_MINIMAL" "Install BootManager without additional device drivers for USB, HDD and network."
 SET "BM.TXT_INSTALL_BM_TO" "Install BootManager to..."
 
 # Firmware Manager
 SET "BM.TXT_UPG_FIRMWARE" "Upgrade Firmware"
 SET "BM.TXT_HINT_UPG_FIRMWARE" "Upgrade your CC firmware from this disc."
-
 SET "BM.TXT_FORMAT_DFFS" "Format DFFS"
 SET "BM.TXT_HINT_FORMAT_DFFS" "Format the Crystal Chip flash."
 SET "BM.TXT_DFFS_REM_BM" "Remove dffs:/BM"
@@ -111,7 +104,6 @@ SET "BM.TXT_HINT_UPG_FW" "Upgrade your CrystalChip firmware from CCI file."
 SET "BM.TXT_ERASE_FW" "Erase Firmware"
 SET "BM.TXT_HINT_ERASE_FW" "Completely erase the contents of your CrystalChip flash/EEPROM."
 SET "BM.TXT_ASK_ERASE_FW" "Are you sure you want to erase your firmware?"
-
 SET "BM.TXT_FW_TITLE" "Firmware Variations:"
 SET "BM.TXT_FW_QUESTION" "Run Boot Manager from which interface?"
 SET "BM.TXT_FW_MC0" "1- BM runs from Memory Card 1"
@@ -157,16 +149,18 @@ SET "BM.TXT_HINT_INSTALL_APP" "Install an application from one device to another
 SET "BM.TXT_INSTALL_APP_FROM" "Install Application(s) from"
 SET "BM.TXT_INSTALL_APP_TO" "Install Application to"
 SET "BM.TXT_NO_INSTALL" "Can't install to same device!"
-SET "BM.TXT_NO_INSTALL_CDROM" "Can't install to CD/DVD!"
-SET "BM.TXT_NO_REMOVE_CDROM" "Can't remove from CD/DVD!"
+SET "BM.TXT_NO_INSTALL_DEV" "Can't install to device!"
 
 # Remove Application Browser
 SET "BM.TXT_HINT_REMOVE_APP" "Remove an application from a device."
 SET "BM.TXT_REMOVE_APP_FROM" "Remove Application(s) from"
+SET "BM.TXT_NO_REMOVE_DEV" "Can't remove from device!"
 
 # Dev Manager
 SET "BM.TXT_DEV_MANAGER" "Device Manager"
 SET "BM.TXT_HINT_DEV_MANAGER" "Install and remove device drivers."
+SET "BM.TXT_MISSING" "missing"
+SET "BM.TXT_UNSUPPORTED" "not supported on"
 
 # Install Device
 SET "BM.TXT_HINT_INSTALL_DEV" "Install the drivers for devices."
@@ -187,16 +181,15 @@ SET "BM.TXT_HOST_DESC" "PC Host via PS2Client"
 SET "BM.TXT_HOST_DESC_1" "PC Host driver"
 SET "BM.TXT_USB_DESC" "USB Drive"
 SET "BM.TXT_USB_DESC_1" "USB drivers"
-SET "BM.TXT_HDD_DESC" "PS2 Hard Drive"
-SET "BM.TXT_HDD_DESC_1" "PS2 HDD drivers"
+SET "BM.TXT_HDD_DESC" "Hard Drive"
+SET "BM.TXT_HDD_DESC_1" "HDD drivers"
 SET "BM.TXT_FTP_DESC" "FTP driver"
 SET "BM.TXT_NET" "Network"
-SET "BM.TXT_NET_DESC" "PS2 Network drivers"
+SET "BM.TXT_NET_DESC" "Network drivers"
 
 # Memory Card Manager
 SET "BM.TXT_MC_MANAGER" "Memory Card Manager"
 SET "BM.TXT_HINT_MC_MANAGER" "Format Memory Cards, Remove BootManager, etc."
-
 SET "BM.TXT_MC_REM_ALL_APPS" "Remove all Applications"
 SET "BM.TXT_HINT_MC_REM_ALL_APPS" "Remove all applications from the Memory Card in slot 1."
 SET "BM.TXT_MC_REM_BOOT" "Remove mc0:/BOOT"
@@ -241,6 +234,9 @@ SET "BM.TXT_HINT_HINT_SCROLLBAR" "Turn on and off the Hint Scrollbar at the bott
 
 SET "BM.TXT_SCROLLBAR_SPEED" "Hint Scrollbar Speed"
 SET "BM.TXT_HINT_SCROLLBAR_SPEED" "Set the speed of the Hint Scrollbar."
+
+SET "BM.TXT_APP_DIR" "App Browser Directories"
+SET "BM.TXT_HINT_APP_DIR" "Turn on and off directories in Application Browser"
 
 # Network Configuration Menu
 SET "BM.TXT_NET_CONFIG" "Network"
@@ -544,5 +540,36 @@ SET "BM.TXT_REM_FAIL" "Failed removing"
 SET "BM.TXT_NO_CC" "Unsupported CrystalChip"
 SET "BM.TXT_PROGFW_FAIL" "Failed programming firmware file!"
 SET "BM.TXT_PROGFW_DONE" "Firmware upgraded successfully!"
+
+#Confirm Choices
+SET "BM.TXT_FROM" "from"
+SET "BM.TXT_TO" "to"
+SET "BM.TXT_CONFIRM_REM_INST" "Confirm Remove/Install"
+SET "BM.TXT_CONFIRM_REM_INST_HINT" "Prompts to Remove/Install before continuing action."
+SET "BM.TXT_BOTH" "Both"
+
+#Tutorials
+SET "BM.TXT_TUTORIAL" "Tutorial"
+SET "BM.TXT_MENU_HK" "Hotkeys" 
+SET "BM.TXT_MENU_HK_HINT" "R1, R2, L1, L2 Hotkey info"
+SET "BM.TXT_TITLE_HK" "Hotkey Tutorial"
+SET "BM.TXT_HK_TUTORIAL1" "To set hotkeys, press SELECT"
+SET "BM.TXT_HK_TUTORIAL2" "on item of choice."
+SET "BM.TXT_HK_TUTORIAL3" "Then press R1,R2,L1,L2,"
+SET "BM.TXT_HK_TUTORIAL4"  "TRIANGLE,SQUARE or START."
+SET "BM.TXT_HK_TUTORIAL5" "Confirm with X, Cancel with SELECT."
+SET "BM.TXT_HK_TUTORIAL6" "To clear previously set hotkey,"
+SET "BM.TXT_HK_TUTORIAL7" "press SELECT, BUTTON, SELECT on menu item."
+SET "BM.TXT_MENU_BMRTFLDR" "Updating Defined Root Folder" 
+SET "BM.TXT_MENU_BMRTFLDR_HINT" "Root folder update tutorial"
+SET "BM.TXT_TITLE_BMRTFLDR" "BMRTFLDER.PBT Tutorial"
+SET "BM.TXT_BMRTFLDR_TUTORIAL1" "Edit BM/SCRIPTS/BMRTFLDR.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL2" "as needed for BootManager"
+SET "BM.TXT_BMRTFLDR_TUTORIAL3" "to find apps in device:/*"
+SET "BM.TXT_BMRTFLDR_TUTORIAL4" "Once done, place copy at"
+SET "BM.TXT_BMRTFLDR_TUTORIAL5" "device:/BMRTFLDER.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL6" "Browsing to device for action"
+SET "BM.TXT_BMRTFLDR_TUTORIAL7" "will update and delete the source."
+SET "BM.TXT_BMRTFLDR_TUTORIAL8" "APPINFO.PBT is still needed per APP"
 
 EXIT 0

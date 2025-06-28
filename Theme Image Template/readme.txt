@@ -1,0 +1,1 @@
+420x300 TGA image with Alpha Channel RLE compressed TOP LEFT

@@ -1,11 +1,11 @@
 # German translation of Crystal Chips BootManager menu for BMMENUS.PBT v1.4
-# Only intended to use with the R34 modified v3+ release by R3Z3N.
+# Only intended to use with the R34 modified v4+ release by R3Z3N.
 
 # Check the menu script version to be sure this script supports it.
 IF NEQ "$BM.MENU_MAJOR_VER$" "1"
     ECHO "Unsupported menu version v$BM.MENU_MAJOR_VER$.$BM.MENU_MINOR_VER$!"
     EXIT 0
-ELSEIF NEQ "$BM.MENU_MINOR_VER$" "4"
+ELSEIF NEQ "$BM.MENU_MINOR_VER$" "5"
     ECHO "Unsupported menu version v$BM.MENU_MAJOR_VER$.$BM.MENU_MINOR_VER$!"
     EXIT 0
 ENDIF
@@ -15,15 +15,15 @@ SET "DESC" "Deutsche Sprachdatei."
 
 # Do not change these 2 lines!
 GOTO "$ARG1$"
-RETURN "-1"
+RETURN -1
 
 :LABEL_NAME
     ADDWIDGET "LABEL" "$ARG2$$TITLE$"
-    EXIT "0"
+    EXIT 0
 
 :QUERY
     ADDWIDGET "CALL" "$TITLE$" "$DESC$" $ARG2$ "$ARG0$" "$ARG3$" "$ARG4$" "$ARG5$"
-    EXIT "0"
+    EXIT 0
 
 :INSTALL
     COPY "$PWD$/GERMAN.PBT" "$BM.BM_PATH$/LANG/GERMAN.PBT"
@@ -34,7 +34,7 @@ RETURN "-1"
     EXIT 0
 
 :LOAD
-ECHO "Englischer Text wird geladen..."
+ECHO "Deutsch Text wird geladen..."
 
 # Miscellaneous
 SET "BM.TXT_YES" "Ja"
@@ -89,11 +89,6 @@ SET "BM.TXT_MAIN_MENU" "Hauptmen�"
 # Install BootManager
 SET "BM.TXT_INST_BM" "BootManager installieren"
 SET "BM.TXT_HINT_INST_BM" "BootManager installieren."
-SET "BM.TXT_CHOOSE_INST_BM" "W�hle Installationsoption"
-SET "BM.TXT_FULL" "Voll"
-SET "BM.TXT_HINT_FULL" "Installiere BootManager mit allen Laufwerkstreibern."
-SET "BM.TXT_MINIMAL" "Minimal"
-SET "BM.TXT_HINT_MINIMAL" "Installiere BootManager ohne zus�tzliche Laufwerkstreiber f�r USB, HDD und Netzwerk."
 SET "BM.TXT_INSTALL_BM_TO" "Installiere BootManager nach..."
 
 # Firmware Manager
@@ -153,19 +148,22 @@ SET "BM.TXT_RUN_AVAIL" "Ausführbar auf"
 SET "BM.TXT_RUN_UNAVAIL" "Kann nicht vom Gerät ausgeführt werden!"
 
 # Install Application Browser
-SET "BM.TXT_HINT_INSTALL_APP" "Installiert ein Programm von einem Laufwerk auf ein anderes."
-SET "BM.TXT_INSTALL_APP_FROM" "Installiere Programm(e) von"
-SET "BM.TXT_INSTALL_APP_TO" "Installiere Programm auf"
+SET "BM.TXT_HINT_INSTALL_APP" "Anwendung von einem Gerät auf ein anderes installieren."
+SET "BM.TXT_INSTALL_APP_FROM" "Anwendung(en) installieren von"
+SET "BM.TXT_INSTALL_APP_TO" "Anwendung installieren auf"
 SET "BM.TXT_NO_INSTALL" "Installation auf demselben Gerät nicht möglich!"
-SET "BM.TXT_NO_INSTALL_CDROM" "Installation auf CD/DVD nicht möglich!"
+SET "BM.TXT_NO_INSTALL_DEV" "Installation auf Gerät nicht möglich!"
 
 # Remove Application Browser
 SET "BM.TXT_HINT_REMOVE_APP" "Entfernt ein Programm von einem Laufwerk."
 SET "BM.TXT_REMOVE_APP_FROM" "Entferne Programm(e) von"
+SET "BM.TXT_NO_REMOVE_DEV" "Entfernen vom Gerät nicht möglich!"
 
 # Dev Manager
 SET "BM.TXT_DEV_MANAGER" "Laufwerk Manager"
 SET "BM.TXT_HINT_DEV_MANAGER" "Installiere and entferne Laufwerktreiber."
+SET "BM.TXT_MISSING" "fehlen"
+SET "BM.TXT_UNSUPPORTED" "nicht unterstützt"
 
 # Install Device
 SET "BM.TXT_HINT_INSTALL_DEV" "Installiere die Treiber f�r Laufwerke."
@@ -240,6 +238,9 @@ SET "BM.TXT_HINT_HINT_SCROLLBAR" "Schaltet die Hinweisleiste unten im Bild an un
 
 SET "BM.TXT_SCROLLBAR_SPEED" "Hinweisleiste Geschwindigkeit"
 SET "BM.TXT_HINT_SCROLLBAR_SPEED" "Bestimmt die Laufgeschwindigkeit der Hinweisleiste."
+
+SET "BM.TXT_APP_DIR" "App-Browser-Verzeichnisse"
+SET "BM.TXT_HINT_APP_DIR" "Verzeichnisse im Anwendungsbrowser aktivieren und deaktivieren"
 
 # Network Configuration Menu
 SET "BM.TXT_NET_CONFIG" "Netzwerk Konfiguration"
@@ -543,5 +544,36 @@ SET "BM.TXT_REM_FAIL" "Fehler beim Entfernen von"
 SET "BM.TXT_NO_CC" "Nicht unterst�tzter CrystalChip"
 SET "BM.TXT_PROGFW_FAIL" "Programmieren der Firmware fehlgeschlagen!"
 SET "BM.TXT_PROGFW_DONE" "Firmware erfolgreich aktualisiert!"
+
+#Confirm Choices
+SET "BM.TXT_FROM" "von"
+SET "BM.TXT_TO" "nach"
+SET "BM.TXT_CONFIRM_REM_INST" "Entfernen/Installieren bestätigen"
+SET "BM.TXT_CONFIRM_REM_INST_HINT" "Fordert zum Entfernen/Installieren auf, bevor die Aktion fortgesetzt wird."
+SET "BM.TXT_BOTH" "Beides"
+
+#Tutorials
+SET "BM.TXT_TUTORIAL" "Tutorial"
+SET "BM.TXT_MENU_HK" "Hotkeys"
+SET "BM.TXT_MENU_HK_HINT" "R1, R2, L1, L2 Hotkey Info"
+SET "BM.TXT_TITLE_HK" "Hotkey-Tutorial"
+SET "BM.TXT_HK_TUTORIAL1" "Um Hotkeys festzulegen, drücke SELECT"
+SET "BM.TXT_HK_TUTORIAL2" "auf das gewünschte Element."
+SET "BM.TXT_HK_TUTORIAL3" "Drücke dann R1, R2, L1, L2,"
+SET "BM.TXT_HK_TUTORIAL4" "DREIECK, QUADRAT oder START."
+SET "BM.TXT_HK_TUTORIAL5" "Mit X bestätigen, mit SELECT abbrechen."
+SET "BM.TXT_HK_TUTORIAL6" "Um einen zuvor festgelegten Hotkey zu löschen,"
+SET "BM.TXT_HK_TUTORIAL7" "drücken Sie bei einem Menüpunkt AUSWÄHLEN, TASTE, AUSWÄHLEN."
+SET "BM.TXT_MENU_BMRTFLDR" "Aktualisieren des definierten Stammordners"
+SET "BM.TXT_MENU_BMRTFLDR_HINT" "Tutorial zur Aktualisierung des Stammordners"
+SET "BM.TXT_TITLE_BMRTFLDR" "BMRTFLDER.PBT Tutorial"
+SET "BM.TXT_BMRTFLDR_TUTORIAL1" "Bearbeiten Sie BM/SCRIPTS/BMRTFLDR.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL2" "nach Bedarf für den BootManager"
+SET "BM.TXT_BMRTFLDR_TUTORIAL3" "um Apps in Gerät:/* zu finden"
+SET "BM.TXT_BMRTFLDR_TUTORIAL4" "Sobald dies geschehen ist, legen Sie eine Kopie ab unter"
+SET "BM.TXT_BMRTFLDR_TUTORIAL5" "Gerät:/BMRTFLDER.PBT"
+SET "BM.TXT_BMRTFLDR_TUTORIAL6" "Das Durchsuchen des Geräts zur Ausführung der Aktion"
+SET "BM.TXT_BMRTFLDR_TUTORIAL7" "wird die Quelle aktualisieren und löschen."
+SET "BM.TXT_BMRTFLDR_TUTORIAL8" "APPINFO.PBT wird weiterhin pro App benötigt"
 
 EXIT 0

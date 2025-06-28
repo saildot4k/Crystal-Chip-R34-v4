@@ -1,4 +1,4 @@
-# Crystal Chips BootManager Host driver script. v1.2
+# Crystal Chips BootManager Host driver script for use with PS2 Client. v1.2
 
 KEEP
 
@@ -9,19 +9,22 @@ GOTO "$ARG1$"
 RETURN -1
 
 :QUERY
-    ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_HOST_DESC_1$" $ARG2$ "$ARG0$" "$ARG3$" "$ARG4$" "$ARG5$"
+    ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_HOST_DESC_1$" $ARG2$ "$ARG0$" "$ARG3$" "$ARG4$" "$ARG5$" "$TITLE$" "$PWD$" "BM/DEVS/HOST" "BM/DEVS/HOST"
     RETURN 0
 
 :IF_QUERY
     IF EXISTS "host:/"
-        IF MATCHES "host:/*"  "$ARG6$"
+        IF MATCHES "host:/*"  "$ARG3$"
             ADDWIDGET LABEL "$TITLE$-$BM.TXT_NO_INSTALL$"
             RETURN 0
-        ELSEIF MATCHES "RUN" "$ARG7$"
+        ELSEIF MATCHES "RUN" "$ARG4$"
             ADDWIDGET LABEL "$TITLE$-$BM.TXT_RUN_UNAVAIL$"
             RETURN 0
-        ELSEIF NOT MATCHES "host:/*"  "$ARG6$"
-            ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_HOST_DESC$" $ARG2$ "host" "$ARG3$" "$ARG4$" "$ARG5$"
+        ELSEIF MATCHES "AL_*" "$ARG4$"
+            ADDWIDGET LABEL "$TITLE$-$BM.TXT_RUN_UNAVAIL$"
+            RETURN 0
+        ELSEIF NOT MATCHES "host:/*"  "$ARG3$"
+            ADDWIDGET "CALL" "$TITLE$" "$BM.TXT_HOST_DESC$" $ARG2$ "host" "$ARG3$" "$ARG4$" "$ARG5$" "$ARG6$" "$ARG7$" "$ARG8$" "$ARG9$" "$ARG10$" "$ARG11$"
             RETURN 0
         ENDIF
     ENDIF
@@ -77,4 +80,5 @@ RETURN -1
 
 :LOADEXEC
     # LoadExec on host is not possible at this time.
-    RETURN "0"
+    RETURN 0
+    
