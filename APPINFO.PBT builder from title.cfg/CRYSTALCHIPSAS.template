@@ -3,7 +3,7 @@
 
 # Change this information to describe the application and where it should be ran from for memcard (SAS) or other devices (SAS_NON_MC)
 # SAS is the App folder name. SAS_NON_MC defines if app is in root of non-memcard device (non_mc:/$SAS$) or APP folder (non_mc:/APPS/$SAS$)
-# This is so that you do not have to edit any info below line 40.
+# This is so that you do not have to edit any info below line 28.
 #
 # Some devices are case sensitive! Make sure your case matches!
 #
@@ -15,7 +15,7 @@ SET "DESC" "Short blurb"
 SET "MEDIAS" ""
 SET "ELF" "PS2Temps.elf"
 SET "SAS" "DST_PS2TEMPS"
-# Comment out 1 of the 2 lines below. If app is in non-mc:/$SAS$ comment out the first, if in non-mc:/APPS/$SAS$ comment out the second
+# Comment out 1 of the 2 lines below. If app is in non-mc:/$SAS$ comment out the second, if in non-mc:/APPS/$SAS$ comment out the first
 # SET "SAS_NON_MC" "$SAS$"
 SET "SAS_NON_MC" "APPS/$SAS$"
 #
@@ -68,21 +68,12 @@ RETURN -1
 
 :REMOVE
     IF FAIL RRM "$PWD$"
-        GOTO "REMOVE_TRY_AGAIN"
-    ENDIF
-    EXIT 0
-
-# Damn bugs...
-:REMOVE_TRY_AGAIN
-    IF FAIL RRM "$PWD$"
-        GOTO "REMOVE_TRY_AGAIN2"
-    ENDIF
-    EXIT 0
-
-:REMOVE_TRY_AGAIN2
-    IF FAIL RRM "$PWD$"
-        MESSAGE "Failed removing $TITLE$"
-        RETURN -1
+        IF FAIL RRM "$PWD$"
+          IF FAIL RRM "$PWD$"
+            MESSAGE "Failed removing $TITLE$"
+            RETURN -1
+          ENDIF
+        ENDIF
     ENDIF
     EXIT 0
 
