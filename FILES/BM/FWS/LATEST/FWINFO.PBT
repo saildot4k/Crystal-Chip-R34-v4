@@ -5,7 +5,7 @@
 
 # Change this information to describe the application.
 SET "TITLE" "Crystal Chips Firmware"
-SET "VERSION" "Release 34 v3"
+SET "VERSION" "Release 34 v5"
 SET "AUTHOR" "CrystalChips"
 SET "DESC" "Upgrade your CrystalChip to the latest firmware! MC0/MC1 Boot options by R3Z3N for CC1.X"
 #
