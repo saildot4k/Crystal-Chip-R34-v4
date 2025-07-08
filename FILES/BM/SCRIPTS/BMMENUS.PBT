@@ -375,10 +375,14 @@ GOTO "$ARG1$"
     IF EXISTS "mc0:/"
         ADDWIDGET "CALL" "$BM.TXT_MC_REM_ALL_APPS$" "$BM.TXT_HINT_MC_REM_ALL_APPS$" "$ARG0$" "REM_APPS" "mc0"
         ADDWIDGET "CALL" "$BM.TXT_MC_REM_BM$" "$BM.TXT_HINT_MC_REM_BM$" "$ARG0$" "REM_DIR" "mc0:/BM"
-        ADDWIDGET "CALL" "$BM.TXT_MC0_COPY_HOST$" "$BM.TXT_HINT_MC0_COPY_HOST$" "$ARG0$" "COPY_TO" "mc0:/*" "host:/MC"
+        IF EXISTS "host:/"
+            ADDWIDGET "CALL" "$BM.TXT_MC0_COPY_HOST$" "$BM.TXT_HINT_MC0_COPY_HOST$" "$ARG0$" "COPY_TO" "mc0:/*" "host:/MC"
+        ENDIF
     ENDIF
     IF EXISTS "mc1:/"
-        ADDWIDGET "CALL" "$BM.TXT_MC1_COPY_HOST$" "$BM.TXT_HINT_MC1_COPY_HOST$" "$ARG0$" "COPY_TO" "mc1:/*" "host:/MC"
+        IF EXISTS "host:/"
+            ADDWIDGET "CALL" "$BM.TXT_MC1_COPY_HOST$" "$BM.TXT_HINT_MC1_COPY_HOST$" "$ARG0$" "COPY_TO" "mc1:/*" "host:/MC"
+        ENDIF
     ENDIF
     IF EXISTS "mc0:/"
         ADDWIDGET "CALL" "$BM.TXT_MC0_ERASE$" "$BM.TXT_HINT_MC0_ERASE$" "$ARG0$" "FORMAT_DEV" "mc0"
@@ -395,7 +399,6 @@ GOTO "$ARG1$"
 
 :COPY_TO
     CLEARWIDGETS
-    RRM "mc1:/BOOT"
     COPY "$ARG2$" "$ARG3$"
     RETURN 0
 
@@ -407,7 +410,7 @@ GOTO "$ARG1$"
 
 :REM_DIR
     CLEARWIDGETS
-    RM "$ARG2$"
+    RRM "$ARG2$"
     RETURN 0
 
 :MENU_SYS_INFO
