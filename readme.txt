@@ -22,7 +22,7 @@ Late CC1.1/CC.1.2 and CC 2.0 can be upgraded to a 4MB DataFlash (AT45DB321D- S o
 
 Release History:
 
-Release 34 V4 by R3Z3N 6/27/2025
+Release 34 V5 by R3Z3N 6/27/2025
     Fixes/Changes:
 
         - SAS (Save Application Support) updated (and probably finalized). There is a script in BM/SCRIPTS/BMRTFLDR.PBT (BootManager Root Folder) \
