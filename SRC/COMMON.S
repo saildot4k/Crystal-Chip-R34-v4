@@ -1,4 +1,4 @@
-INCLUDE "macros.inc"
+INCLUDE "MACROS.S"
 
 ADDR_OSDHOOK            EQU 0x000FF000
 

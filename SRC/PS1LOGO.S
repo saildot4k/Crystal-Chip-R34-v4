@@ -4,7 +4,7 @@
 ;   PS1 disc load times.
 ;
 
-INCLUDE "macros.inc"
+INCLUDE "MACROS.S"
 
 TARGET BIN
 

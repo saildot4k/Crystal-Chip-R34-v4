@@ -14,7 +14,7 @@
 
 TARGET BIN
 
-INCLUDE "macros.inc"
+INCLUDE "MACROS.S"
 
 code                    SEGMENT 0
 
