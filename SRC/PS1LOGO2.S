@@ -2,7 +2,7 @@
 ; PS1 LOGO patch for v14 consoles.
 ;
 
-INCLUDE "macros.inc"
+INCLUDE "MACROS.S"
 
 TARGET BIN
 
