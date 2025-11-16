@@ -136,6 +136,11 @@ SET "BM.TXT_MENU_INSTALL" "Installa"
 SET "BM.TXT_INSTALL_AVAIL" "Disponibile su"
 SET "BM.TXT_MENU_REMOVE" "Rimuovi"
 SET "BM.TXT_REMOVE_AVAIL" "Installato su"
+SET "BM.TXT_ADV" "Configurazione avanzata dell'app"
+SET "BM.TXT_ADV_DESC" "Modifica le modalità di compatibilità, le impostazioni dell'app, ecc."
+SET "BM.TXT_ADV_NO_FILE" "Rimuovi variabili di configurazione dell'app - Nessuna salvata!"
+SET "BM.TXT_ADV_REMOVE" "Rimuovi variabili di configurazione dell'app"
+SET "BM.TXT_ADV_REMOVE_DESC" "Elimina $BM.BM_PATH$/CONFIG/APPCNF.PBT"
 
 # Esegui browser applicazioni
 SET "BM.TXT_MENU_RUN" "Esegui"

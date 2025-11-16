@@ -13,7 +13,7 @@
 # "$ARG5$:/*/APPINFO.PBT
 # So this was added in the same idea that FMCB/OSDMenu uses where everthing is defined,
 # in this case only root folder needs to be defined. Please modify as needed, but please only add folders
-# that exist from https://ps2wiki.github.io
+# that exist from https://ps2homebrewstore.com
 
 
 # Keep this script resident in memory to speed up calls to it.
@@ -33,77 +33,77 @@ KEEP
     LOADEXEC "PBAT" "$ARG5$:/APP_APOLLO/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/APP_ARGON/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/BOOT/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_CHEATDEVICE-MMCE/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/APP_CHEATDEVICE-FORWARDER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/APP_GSM/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/APP_HDLOADER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/APP_NHDDL/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_OSDMENU/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_OPL-120B2207/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_OPL-120B2049/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_OPL-120B2049GID/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_OPL-120B2201/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_OPL-MMCE-BETA3/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_OPL-MMCE-BETA2/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_OPL-MMCE-HDD/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_PSBBN-LAUNCHER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_SMS/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/APP_OPL/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/APP_UOPL/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/APP_UOPL-BETRAYAL/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_WLE-ISR-HDD/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/APP_PSBBN-FORWARDER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/APP_SMS/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/APP_WLE-ISR/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/APP_WLE-ISR-XF/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/APP_WLE-ISR-XF-MM/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/APP_WLE-ISR-XF-MM-DS/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/APP_WLE-ISR-XF-MX/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/APP_WLE-ISR-XF-MX-DS/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/APP_WLE-KHN/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/APP_WLE-XFW/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-
+    LOADEXEC "PBAT" "$ARG5$:/APP_WLE/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/APP_ULE/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    
     # DBG_ (DEBUG)
     LOADEXEC "PBAT" "$ARG5$:/DBG_PS2LINK/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/DBG_PS2LINK-EXTIRX/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/DBG_PS2LINK-HILDING/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/DBG_PS2LINK-HILDINGEXTIRX/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
 
     # DST_ (Diagnostic Service Tool)
     LOADEXEC "PBAT" "$ARG5$:/DST_BIOS-DRAIN/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/DST_HDDCHECKER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/DST_MCA/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/DST_MECHACON-CRASH-TESTER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/DST_MX4SIO-TESTER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/DST_OGMC/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/DST_OG-CARD-TEST/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/DST_PADTEST/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/DST_PS2-HDD-TESTER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/DST-PS2-RDRAM-TEST/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/DST_PS2-RDRAMTEST/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/DST_PS2TEMPS/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/DST_PS2-ID-TOOL/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/DST_ROMVERCHK/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
 
     # EMU_ (Emulation)
     LOADEXEC "PBAT" "$ARG5$:/EMU_PICODRIVE/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/EMU_PICODRIVE151B/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/EMU_PICODRIVE205/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/RETROLAUNCHER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/EMU_X2P/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/EMU_X2PMC/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
 
     # GME_ (Games)
-    LOADEXEC "PBAT" "$ARG5$:/GME_3DPINBALL-PLAYER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/GME_HERMES/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/GME_3DPINBALL-PLAYER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/GME_SMWAR/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/GME_SM64/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/GME_SMWAR-20060223/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
 
     # RTE_ (Run Time Environments)
-    LOADEXEC "PBAT" "$ARG5$:/NEUTRINO/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
-    LOADEXEC "PBAT" "$ARG5$:/OSDXMB/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    
+    LOADEXEC "PBAT" "$ARG5$:/APP_OSDXMB/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/XEBPLUS/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/RTE_KERNELLDR3/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/NEUTRINO/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/ATHENAENV/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/ENCELADUS/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
 
     # PS1_ (Playstation 1)
     LOADEXEC "PBAT" "$ARG5$:/PS1_DKWDRV/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/PS1_POPSLOADER/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
 
     # SYS_ (System)
-    LOADEXEC "PBAT" "$ARG5$:/SYS_IGR/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/SYS_NTPS2/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
     LOADEXEC "PBAT" "$ARG5$:/SYS-CONF/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
+    LOADEXEC "PBAT" "$ARG5$:/SYS_OSDMENU/APPINFO.PBT" "QUERY" "^"$ARG0$^" ^"$ARG4$^" ^"$ARG2$^" ^"$ARG3$^"" "$ARG2$"
 
 ###################################################################
     # DO NOT EDIT!
-    IF MATCHES "ACTION RUN APP" "$ARG1$ $ARG2$ $ARG3$"
-        LOADEXEC "PBAT" "$BM.SCRIPTS$/BMMENUS.PBT" "$ARG1$" "$ARG2$" "$ARG3$" "$ARG4$" "$ARG5$" "$ARG6$"
-        RETURN 0
-    ELSEIF MATCHES "ACTION REMOVE APP" "$ARG1$ $ARG2$ $ARG3$"
+    IF MATCHES "ACTION APP" "$ARG1$ $ARG3$"
         LOADEXEC "PBAT" "$BM.SCRIPTS$/BMMENUS.PBT" "$ARG1$" "$ARG2$" "$ARG3$" "$ARG4$" "$ARG5$" "$ARG6$"
         RETURN 0
     ELSEIF MATCHES "MENU_CONFIRM_YESNO REMOVE APP" "$ARG1$ $ARG2$ $ARG3$"

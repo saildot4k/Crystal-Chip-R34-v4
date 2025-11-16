@@ -139,6 +139,11 @@ SET "BM.TXT_MENU_INSTALL" "Installieren"
 SET "BM.TXT_INSTALL_AVAIL" "Verfügbar am"
 SET "BM.TXT_MENU_REMOVE" "Entfernen"
 SET "BM.TXT_REMOVE_AVAIL" "Installiert auf"
+SET "BM.TXT_ADV" "Erweiterte App-Konfiguration"
+SET "BM.TXT_ADV_DESC" "Kompatibilitätsmodi, App-Einstellungen usw. andern"
+SET "BM.TXT_ADV_NO_FILE" "App-Konfigurationsvariablen entfernen - Keine gespeichert!"
+SET "BM.TXT_ADV_REMOVE" "App-Konfigurationsvariablen entfernen"
+SET "BM.TXT_ADV_REMOVE_DESC" "Löschen Sie $BM.BM_PATH$/CONFIG/APPCNF.PBT"
 
 # Run Application Browser
 SET "BM.TXT_MENU_RUN" "Starten"

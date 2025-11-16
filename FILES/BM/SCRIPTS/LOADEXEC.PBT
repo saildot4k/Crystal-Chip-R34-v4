@@ -3,8 +3,7 @@
 # For use only with Crystal Chips hardware and software.
 #
 # Modification Info:
-# This file is unmodified.  If you modify this script and distribute it,
-#   please edit this text.  Please do not change the copyright information.
+# 11/15/2025 Added up to 4 arg[v] for support for 2025 apps like NHDDL/NEUTRINO-R3Z3N aka ps2modchiptutorials.com
 #
 # Description:
 # This script is used by BootManager(BM) to load and execute PS2 ELF files.
@@ -21,8 +20,8 @@ ELSE
         ECHO "Unknown device for file '$ARG1$'!"
         RETURN "-1"
     ENDIF
-    LOADEXEC "PBAT" "$BM.EXEC_DEV_PBT$" "LOADEXEC" "$ARG1$" $ARG2$
+    LOADEXEC "PBAT" "$BM.EXEC_DEV_PBT$" "LOADEXEC" "$ARG1$" "$ARG2$ $ARG3$ $ARG4$ $ARG5$"
 ENDIF
 
 # Do not change this line!
-LOADEXEC "EEELF" "$ARG1$" $ARG2$
+LOADEXEC "EEELF" "$ARG1$" "$ARG2$ $ARG3$ $ARG4$ $ARG5$"

@@ -28,8 +28,7 @@ ELSEIF MATCHES "host:*" "$PWD$"
     SET "BM.DRIVER_PATH" "host:/BM/SHARED"
     SET "BM.DRIVER_DEV_DRIVERS" ""
 ELSE
-    # Drivers are stored on MC0 (line 32) or device BM is loaded from (line 33) for all other devices.
-    # SET "BM.DRIVER_PATH" "mc0:/BM/SHARED"
+    # Drivers are stored on MemCard
     SET "BM.DRIVER_PATH" "$BM.BM_PATH$/SHARED"
     SET "BM.DRIVER_DEV_DRIVERS" "^"-m rom0:SIO2MAN^" ^"-m rom0:MCMAN^""
 ENDIF
@@ -40,31 +39,29 @@ IF MATCHES "host:*" "$PWD$"
 # IMPORTANT: Make sure you're using the latest PS2LINK and ps2client since up until July 12 2006
 # ps2client and ps2link had bugs which prevented them from working properly.
 #    SET "BM.INSTALLER_MODE" "1"
-    LOADEXEC "IRX" "rom0:XSIO2MAN"
-    LOADEXEC "IRX" "rom0:XMCMAN"
-    LOADEXEC "IRX" "rom0:XPADMAN"
-ELSEIF MATCHES "pfs0:*" "$PWD$"        #TEST subsection
-    LOADEXEC "IRX" "rom0:XSIO2MAN"
-    LOADEXEC "IRX" "rom0:XMCMAN"
-    LOADEXEC "IRX" "rom0:XPADMAN"
-ELSEIF MATCHES "mass:*" "$PWD$"        #TEST subsection
-    LOADEXEC "IRX" "rom0:XSIO2MAN"
-    LOADEXEC "IRX" "rom0:XMCMAN"
-    LOADEXEC "IRX" "rom0:XPADMAN"
+    GOTO "LOAD_IRX"
+ELSEIF MATCHES "pfs0:*" "$PWD$"
+    GOTO "LOAD_IRX"
+ELSEIF MATCHES "mass:*" "$PWD$"
+    GOTO "LOAD_IRX"
 ELSE
     ECHO "Rebooting IOP... $PWD$"
     # Reboot the IOP
-
     REBOOTIOP "rom0:UDNL rom0:OSDCNF"
-
     IF MATCHES "cdrom?:*" "$PWD$"
         SET "BM.INSTALLER_MODE" "1"
     ENDIF
-
 ENDIF
+GOTO "CONTINUE"
+
+:LOAD_IRX
+    LOADEXEC "IRX" "rom0:XSIO2MAN"
+    LOADEXEC "IRX" "rom0:XMCMAN"
+    LOADEXEC "IRX" "rom0:XPADMAN"
+    GOTO "CONTINUE"
 
 #################################################################################################################################################
-
+:CONTINUE
 ECHO "Loading device drivers..."
 LOADEXEC "PBATS" "$BM.BM_PATH$/DEVS/*/DEVINFO.PBT" "LOAD"
 
@@ -115,4 +112,8 @@ ENDIF
 
 IF EXISTS "$BM.BM_PATH$/CONFIG/MACROS.PBT"
     LOADEXEC "PBAT" "$BM.BM_PATH$/CONFIG/MACROS.PBT"
+ENDIF
+
+IF EXISTS "$BM.BM_PATH$/CONFIG/APPCNF.PBT"
+    LOADEXEC "PBAT" "$BM.BM_PATH$/CONFIG/APPCNF.PBT"
 ENDIF

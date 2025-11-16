@@ -136,6 +136,11 @@ SET "BM.TXT_MENU_INSTALL" "Install"
 SET "BM.TXT_INSTALL_AVAIL" "Available on"
 SET "BM.TXT_MENU_REMOVE" "Remove"
 SET "BM.TXT_REMOVE_AVAIL" "Installed on"
+SET "BM.TXT_ADV" "Advanced App Config"
+SET "BM.TXT_ADV_DESC" "Change compatibility modes, app settings, etc"
+SET "BM.TXT_ADV_NO_FILE" "Remove App Config Variables-None Saved!"
+SET "BM.TXT_ADV_REMOVE" "Remove App Config Variables"
+SET "BM.TXT_ADV_REMOVE_DESC" "Delete $BM.BM_PATH$/CONFIG/APPCNF.PBT"
 
 # Run Application Browser
 SET "BM.TXT_MENU_RUN" "Run"

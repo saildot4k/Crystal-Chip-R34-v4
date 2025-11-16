@@ -136,6 +136,11 @@ SET "BM.TXT_MENU_INSTALL" "Installer"
 SET "BM.TXT_INSTALL_AVAIL" "Disponible sur"
 SET "BM.TXT_MENU_REMOVE" "Supprimer"
 SET "BM.TXT_REMOVE_AVAIL" "Installé sur"
+SET "BM.TXT_ADV" "Configuration avancée de l'application"
+SET "BM.TXT_ADV_DESC" "Modifier les modes de compatibilité, les paramètres de l'application, etc."
+SET "BM.TXT_ADV_NO_FILE" "Suppression des variables de configuration de l'application - Aucune n'a été enregistrée !"
+SET "BM.TXT_ADV_REMOVE" "Supprimer la variable de configuration de l'application"
+SET "BM.TXT_ADV_REMOVE_DESC" "Supprimer $BM.BM_PATH$/CONFIG/APPCNF.PBT"
 
 # Menu Lancement Application
 SET "BM.TXT_MENU_RUN" "Lancer"
