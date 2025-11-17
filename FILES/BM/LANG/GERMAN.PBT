@@ -249,7 +249,7 @@ SET "BM.TXT_HINT_APP_DIR" "Verzeichnisse im Anwendungsbrowser aktivieren und dea
 
 # Network Configuration Menu
 SET "BM.TXT_NET_CONFIG" "Netzwerk Konfiguration"
-SET "BM.TXT_HINT_NET_CONFIG" "�ndere die PS2 Netzwerk Einstellungen."
+SET "BM.TXT_HINT_NET_CONFIG" "Andere die PS2 Netzwerk Einstellungen."
 
 SET "BM.TXT_START_NET" "Starte Netzwerk"
 SET "BM.TXT_HINT_START_NET" "Starte das PS2 Netzwerk."
@@ -286,6 +286,16 @@ SET "BM.TXT_HINT_START_HDD" "Lade HDD Treiber und mounte die HDD."
 
 SET "BM.TXT_AUTOSTART_HDD" "Autostart HDD"
 SET "BM.TXT_HINT_AUTOSTART_HDD" "Automatisches laden der HDD Treiber und mounten der HDD wenn BM startet."
+
+# MMCE Configuration Menu
+SET "BM.TXT_MMCE_CONFIG" "MMCE"
+SET "BM.TXT_HINT_MMCE_CONFIG" "Ändern Sie Ihre MMCE-Einstellungen."
+
+SET "BM.TXT_START_MMCE" "MMCE starten"
+SET "BM.TXT_HINT_START_MMCE" "Laden Sie die MMCE-Treiber und montieren Sie MMCE."
+
+SET "BM.TXT_AUTOSTART_MMCE" "MMCE automatisch starten"
+SET "BM.TXT_HINT_AUTOSTART_MMCE" "Automatisches Laden der MMCE-Treiber und Einbinden von MMCE beim VM-Start."
 
 # Autoload Configuration
 SET "BM.TXT_AUTOLOAD_CONFIG" "Autoload Konfiguration"

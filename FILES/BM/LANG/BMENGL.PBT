@@ -283,6 +283,16 @@ SET "BM.TXT_HINT_START_HDD" "Load HDD drivers and mount HDD."
 SET "BM.TXT_AUTOSTART_HDD" "Auto-start HDD"
 SET "BM.TXT_HINT_AUTOSTART_HDD" "Automaticaly load HDD drivers and mount HDD on BM startup."
 
+# MMCE Configuration Menu
+SET "BM.TXT_MMCE_CONFIG" "MMCE"
+SET "BM.TXT_HINT_MMCE_CONFIG" "Change your MMCE Settings."
+
+SET "BM.TXT_START_MMCE" "Start MMCE"
+SET "BM.TXT_HINT_START_MMCE" "Load MMCE drivers and mount MMCE."
+
+SET "BM.TXT_AUTOSTART_MMCE" "Auto-start MMCE"
+SET "BM.TXT_HINT_AUTOSTART_MMCE" "Automaticaly MMCE drivers and mount MMCE on BM startup."
+
 # Autoload Configuration
 SET "BM.TXT_AUTOLOAD_CONFIG" "Autoload"
 SET "BM.TXT_HINT_AUTOLOAD_CONFIG" "Setup Autoloading of various types of software."

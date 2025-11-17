@@ -33,8 +33,9 @@ ELSE
     SET "BM.DRIVER_DEV_DRIVERS" "^"-m rom0:SIO2MAN^" ^"-m rom0:MCMAN^""
 ENDIF
 
-IF MATCHES "host:*" "$PWD$"
+
 # Do not reboot the IOP if loaded from host(naplink/ps2link)
+IF MATCHES "host:*" "$PWD$"
 # Change this to "0" if you wish to install applications from ps2link.
 # IMPORTANT: Make sure you're using the latest PS2LINK and ps2client since up until July 12 2006
 # ps2client and ps2link had bugs which prevented them from working properly.
@@ -76,7 +77,7 @@ IF NOT EQU "$BM.CNF_THEME_SCRIPT$" "$BM.LOADED_THEME_SCRIPT$"
     IF FAIL LOADEXEC "PBAT" "$BM.CNF_THEME_SCRIPT$" "LOAD"
         ECHO "Failed loading theme!"
     ELSE
-        ECHO "Loaded theme script successfully!"
+        ECHO "Loaded theme script $BM.CNF_THEME_SCRIPT$ successfully!"
     ENDIF
 ENDIF
 
@@ -84,7 +85,6 @@ ECHO "Loading theme configuration..."
 LOADEXEC "PBAT" "$BM.BM_PATH$/CONFIG/THMCONF.PBT"
 
 # Network related init.
-
 IF EQU "$BM.CNF_AUTO_NET_EN$" "1"
     LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADNET.PBT"
 ENDIF
@@ -97,23 +97,25 @@ IF EQU "$BM.CNF_AUTO_FTPD_EN$" "1"
     LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADFTPD.PBT"
 ENDIF
 
-# HDD(Hard Drive) related init. Disables HDD for v14+ and hides HDD Menu in CONFMENU.PBT
+# HDD related init. Disables HDD for v14+ and hides HDD Menu in CONFMENU.PBT
 # This way the same config file can be used betweeen CC 1.x and 2.0 without having to change config file
 
-IF LTE "$BM.BIOS_MAJOR_VER$$BM.BIOS_MINOR_VER$" "200"
-    ECHO "BOOTROM 2.00 or lower, checking HDD Autoload..."
+IF LT "$BM.BIOS_MAJOR_VER$$BM.BIOS_MINOR_VER$" "220"
     IF EQU "$BM.CNF_AUTO_HDD_EN$" "1"
-        ECHO "HDD autoload enabled!"
         LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADHDD.PBT"
-    ELSEIF EQU "$BM.CNF_AUTO_HDD_EN$" "0"
-        ECHO "HDD autoload disabled!"
     ENDIF
+ENDIF
+
+# MMCE related init.
+IF EQU "$BM.CNF_AUTO_MMCE_EN$" "1"
+    LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADMMCE.PBT"
+ENDIF
+
+# Load saved app settings
+IF EXISTS "$BM.BM_PATH$/CONFIG/APPCNF.PBT"
+    LOADEXEC "PBAT" "$BM.BM_PATH$/CONFIG/APPCNF.PBT"
 ENDIF
 
 IF EXISTS "$BM.BM_PATH$/CONFIG/MACROS.PBT"
     LOADEXEC "PBAT" "$BM.BM_PATH$/CONFIG/MACROS.PBT"
-ENDIF
-
-IF EXISTS "$BM.BM_PATH$/CONFIG/APPCNF.PBT"
-    LOADEXEC "PBAT" "$BM.BM_PATH$/CONFIG/APPCNF.PBT"
 ENDIF

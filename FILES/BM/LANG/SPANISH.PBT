@@ -287,6 +287,16 @@ SET "BM.TXT_HINT_START_HDD" "Cargar controladores del HDD y montar el HDD".
 SET "BM.TXT_AUTOSTART_HDD" "Iniciar HDD automáticamente"
 SET "BM.TXT_HINT_AUTOSTART_HDD" "Cargar automáticamente los controladores del HDD y montar el HDD al iniciar BM".
 
+# MMCE Configuration Menu
+SET "BM.TXT_MMCE_CONFIG" "MMCE"
+SET "BM.TXT_HINT_MMCE_CONFIG" "Cambia tu configuración de MMCE."
+
+SET "BM.TXT_START_MMCE" "Iniciar MMCE"
+SET "BM.TXT_HINT_START_MMCE" "Cargue los controladores MMCE y monte MMCE."
+
+SET "BM.TXT_AUTOSTART_MMCE" "MMCE de arranque automático"
+SET "BM.TXT_HINT_AUTOSTART_MMCE" "Instala automáticamente los controladores MMCE y monta MMCE al iniciar la máquina virtual."
+
 # Autoload Configuration
 SET "BM.TXT_AUTOLOAD_CONFIG" "Carga automática"
 SET "BM.TXT_HINT_AUTOLOAD_CONFIG" "Configurar la carga automática de varios tipos de software".

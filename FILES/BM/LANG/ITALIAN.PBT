@@ -283,6 +283,16 @@ SET "BM.TXT_HINT_START_HDD" "Carica i driver HDD e monta HDD."
 SET "BM.TXT_AUTOSTART_HDD" "Avvia automaticamente HDD"
 SET "BM.TXT_HINT_AUTOSTART_HDD" "Carica automaticamente i driver HDD e monta HDD all'avvio di BM."
 
+# MMCE Configuration Menu
+SET "BM.TXT_MMCE_CONFIG" "MMCE"
+SET "BM.TXT_HINT_MMCE_CONFIG" "Modifica le impostazioni MMCE."
+
+SET "BM.TXT_START_MMCE" "Avvia MMCE"
+SET "BM.TXT_HINT_START_MMCE" "Caricare i driver MMCE e montare MMCE."
+
+SET "BM.TXT_AUTOSTART_MMCE" "Avvio automatico MMCE"
+SET "BM.TXT_HINT_AUTOSTART_MMCE" "Carica automaticamente i driver MMCE e monta MMCE all'avvio della VM."
+
 # Configurazione di caricamento automatico
 SET "BM.TXT_AUTOLOAD_CONFIG" "Caricamento automatico"
 SET "BM.TXT_HINT_AUTOLOAD_CONFIG" "Imposta il caricamento automatico di vari tipi di software."

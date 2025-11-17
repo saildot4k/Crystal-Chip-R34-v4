@@ -281,6 +281,16 @@ SET "BM.TXT_HINT_START_HDD" "Charge les pilotes et monte le disque dur HDD."
 SET "BM.TXT_AUTOSTART_HDD" "Démarrage automatique disque dur"
 SET "BM.TXT_HINT_AUTOSTART_HDD" "Charger automatiquement les pilotes et monter le disque dur au démarrage de BM."
 
+# MMCE Configuration Menu
+SET "BM.TXT_MMCE_CONFIG" "MMCE"
+SET "BM.TXT_HINT_MMCE_CONFIG" "Modifiez vos paramètres MMCE."
+
+SET "BM.TXT_START_MMCE" "Démarrer MMCE"
+SET "BM.TXT_HINT_START_MMCE" "Chargez les pilotes MMCE et montez MMCE."
+
+SET "BM.TXT_AUTOSTART_MMCE" "Démarrage automatique MMCE"
+SET "BM.TXT_HINT_AUTOSTART_MMCE" "Charger automatiquement les pilotes MMCE et monter MMCE au démarrage de la machine virtuelle."
+
 # Configuration chargement automatique
 SET "BM.TXT_AUTOLOAD_CONFIG" "Chargement automatique"
 SET "BM.TXT_HINT_AUTOLOAD_CONFIG" "Paramétrer le chargement automatique de divers types de softs."

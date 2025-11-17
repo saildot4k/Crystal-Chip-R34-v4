@@ -22,6 +22,20 @@ Late CC1.1/CC.1.2 and CC 2.0 can be upgraded to a 4MB DataFlash (AT45DB321D- S o
 
 Release History:
 
+
+Release 34 V6 by R3Z3N 11/17/2025
+    Fixes/Changes:
+
+	- MMCE is now treated like HDD/NETWORK. You can enable/disable/autoload in the Configuration menu.
+
+	- Advanced App Config added for apps that support more than 1 arg[v]. See APP_NHDDL for example from https://ps2store.com
+	    This is also useful for testing different boot methods. Reference SYS_OSDMENU from https://ps2store.com
+
+	- Can delete saved app configs from BootManager saved variables (This does not affect apps that MAKE their own configs like OPL.)
+
+	- Scripting cleanup/simplification
+
+
 Release 34 V5 by R3Z3N 6/27/2025
     Fixes/Changes:
 
