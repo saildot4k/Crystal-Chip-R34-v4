@@ -5,7 +5,7 @@
 
 # Change this information to describe the application.
 SET "TITLE" "Crystal Chips Firmware"
-SET "VERSION" "Release 34 v5"
+SET "VERSION" "Release 34 v6"
 SET "AUTHOR" "CrystalChips"
 SET "DESC" "Upgrade your CrystalChip to the latest firmware! MC0/MC1 Boot options by R3Z3N for CC1.X"
 #
@@ -33,7 +33,7 @@ GOTO "$ARG1$"
     # Otherwise installs CC2.0 FW
     ELSE
         IF EQU "$BM.CC_MAJOR_VER$" "2"
-            SET TMP "FWARE20.CCI"
+            SET "TMP" "FWARE20.CCI"
         ELSE
             MESSAGE "$BM.TXT_NO_CC$ CC$BM.CC_MAJOR_VER$.$BM.CC_MINOR_VER$!"
             EXIT "-1"
@@ -63,11 +63,11 @@ GOTO "$ARG1$"
         #FW w/ BM on MC0
             IF EQU "$BM.CC_MAJOR_VER$" "1"
                 IF EQU "$BM.CC_MINOR_VER$" "0"
-                    SET TMP "FWARE10DEV0.CCI"
+                    SET "TMP" "FWARE10DEV0.CCI"
                 ELSEIF EQU "$BM.CC_MINOR_VER$" "1"
-                    SET TMP "FWARE11DEV0.CCI"
+                    SET "TMP" "FWARE11DEV0.CCI"
                 ELSEIF EQU "$BM.CC_MINOR_VER$" "2"
-                    SET TMP "FWARE12DEV0.CCI"
+                    SET "TMP" "FWARE12DEV0.CCI"
                 ELSE
                     MESSAGE "$BM.TXT_NO_CC$ CC$BM.CC_MAJOR_VER$.$BM.CC_MINOR_VER$!"
                     EXIT "-1"
@@ -89,18 +89,18 @@ GOTO "$ARG1$"
 
             MESSAGE "$BM.TXT_PROGFW_DONE$"
 
-                EXIT "0"
+            EXIT "0"
             BREAK
 
         CASE 2
         #FW w/ BM on MC1
             IF EQU "$BM.CC_MAJOR_VER$" "1"
                 IF EQU "$BM.CC_MINOR_VER$" "0"
-                    SET TMP "FWARE10DEV1.CCI"
+                    SET "TMP" "FWARE10DEV1.CCI"
                 ELSEIF EQU "$BM.CC_MINOR_VER$" "1"
-                    SET TMP "FWARE11DEV1.CCI"
+                    SET "TMP" "FWARE11DEV1.CCI"
                 ELSEIF EQU "$BM.CC_MINOR_VER$" "2"
-                    SET TMP "FWARE12DEV1.CCI"
+                    SET "TMP" "FWARE12DEV1.CCI"
                 ELSE
                     MESSAGE "$BM.TXT_NO_CC$ CC$BM.CC_MAJOR_VER$.$BM.CC_MINOR_VER$!"
                     EXIT "-1"
@@ -122,18 +122,18 @@ GOTO "$ARG1$"
 
             MESSAGE "$BM.TXT_PROGFW_DONE$"
 
-                EXIT "0"
+            EXIT "0"
             BREAK
 
         CASE 3
         #FW w/ BM on USB, USBD Drivers must be installed to MC0
             IF EQU "$BM.CC_MAJOR_VER$" "1"
                 IF EQU "$BM.CC_MINOR_VER$" "0"
-                    SET TMP "FWARE10DEV2.CCI"
+                    SET "TMP" "FWARE10DEV2.CCI"
                 ELSEIF EQU "$BM.CC_MINOR_VER$" "1"
-                    SET TMP "FWARE11DEV2.CCI"
+                    SET "TMP" "FWARE11DEV2.CCI"
                 ELSEIF EQU "$BM.CC_MINOR_VER$" "2"
-                    SET TMP "FWARE12DEV2.CCI"
+                    SET "TMP" "FWARE12DEV2.CCI"
                 ELSE
                     MESSAGE "$BM.TXT_NO_CC$ CC$BM.CC_MAJOR_VER$.$BM.CC_MINOR_VER$!"
                     EXIT "-1"
@@ -152,19 +152,21 @@ GOTO "$ARG1$"
                 MESSAGE "$BM.TXT_PROGFW_FAIL$"
                 EXIT "-1"
             ENDIF
-              MESSAGE "$BM.TXT_PROGFW_DONE$"
-                EXIT "0"
+
+            MESSAGE "$BM.TXT_PROGFW_DONE$"
+
+            EXIT "0"
             BREAK
 
         CASE 4
         #FW w/ BM on iHDD, iHDD Drivers must be installed to MC0
             IF EQU "$BM.CC_MAJOR_VER$" "1"
                 IF EQU "$BM.CC_MINOR_VER$" "0"
-                    SET TMP "FWARE10DEV9.CCI"
+                    SET "TMP" "FWARE10DEV9.CCI"
                 ELSEIF EQU "$BM.CC_MINOR_VER$" "1"
-                    SET TMP "FWARE11DEV9.CCI"
+                    SET "TMP" "FWARE11DEV9.CCI"
                 ELSEIF EQU "$BM.CC_MINOR_VER$" "2"
-                    SET TMP "FWARE12DEV9.CCI"
+                    SET "TMP" "FWARE12DEV9.CCI"
                 ELSE
                     MESSAGE "$BM.TXT_NO_CC$ CC$BM.CC_MAJOR_VER$.$BM.CC_MINOR_VER$!"
                     EXIT "-1"
@@ -183,8 +185,10 @@ GOTO "$ARG1$"
                 MESSAGE "$BM.TXT_PROGFW_FAIL$"
                 EXIT "-1"
             ENDIF
-              MESSAGE "$BM.TXT_PROGFW_DONE$"
-                EXIT "0"
+
+            MESSAGE "$BM.TXT_PROGFW_DONE$"
+
+            EXIT "0"
             BREAK
 
 
