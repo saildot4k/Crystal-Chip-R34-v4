@@ -31,28 +31,26 @@ GOTO "$ARG1$"
 #        ADDWIDGET "CALL" "$BM.TXT_FW_USB$" "$BM.TXT_FW_USB_HINT$" "$ARG0$" "INSTALL_WITH_OPTION" "3"
 #        ADDWIDGET "CALL" "$BM.TXT_FW_HDD$" "$BM.TXT_FW_HDD_HINT$" "$ARG0$" "INSTALL_WITH_OPTION" "4"
     # Otherwise installs CC2.0 FW
+    ELSEIF EQU "$BM.CC_MAJOR_VER$" "2"
+        SET "TMP" "FWARE20.CCI"
     ELSE
-        IF EQU "$BM.CC_MAJOR_VER$" "2"
-            SET "TMP" "FWARE20.CCI"
-        ELSE
-            MESSAGE "$BM.TXT_NO_CC$ CC$BM.CC_MAJOR_VER$.$BM.CC_MINOR_VER$!"
-            EXIT "-1"
-        ENDIF
-
-        IF NOT EXISTS "$PWD$/$TMP$"
-            MESSAGE "No CC$BM.CC_MAJOR_VER$.$BM.CC_MINOR_VER$-compatible firmware found in this release!"
-            EXIT "-1"
-        ENDIF
-
-        IF FAIL PROGFW "$PWD$/$TMP$"
-            MESSAGE "$BM.TXT_PROGFW_FAIL$"
-            EXIT "-1"
-        ENDIF
-
-        MESSAGE "$BM.TXT_PROGFW_DONE$"
+        MESSAGE "$BM.TXT_NO_CC$ CC$BM.CC_MAJOR_VER$.$BM.CC_MINOR_VER$!"
+        EXIT "-1"
     ENDIF
 
-    RETURN 0
+    IF NOT EXISTS "$PWD$/$TMP$"
+        MESSAGE "No CC$BM.CC_MAJOR_VER$.$BM.CC_MINOR_VER$-compatible firmware found in this release!"
+        EXIT "-1"
+    ENDIF
+
+    IF FAIL PROGFW "$PWD$/$TMP$"
+        MESSAGE "$BM.TXT_PROGFW_FAIL$"
+        EXIT "-1"
+    ENDIF
+
+    MESSAGE "$BM.TXT_PROGFW_DONE$"
+
+    EXIT 0
 
 
 :INSTALL_WITH_OPTION
