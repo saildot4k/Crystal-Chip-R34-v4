@@ -1,1 +1,1 @@
-ps2client -h 192.168.1.79 execee host:/BM/BM2.ELF
+PS2CLIENT -h 192.168.1.79 execee host:/BM/BM2.ELF
