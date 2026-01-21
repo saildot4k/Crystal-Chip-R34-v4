@@ -66,6 +66,19 @@ GOTO "CONTINUE"
 ECHO "Loading device drivers..."
 LOADEXEC "PBATS" "$BM.BM_PATH$/DEVS/*/DEVINFO.PBT" "LOAD"
 
+# Network related init.
+IF EQU "$BM.CNF_AUTO_NET_EN$" "1"
+    LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADNET.PBT"
+ENDIF
+
+IF EQU "$BM.CNF_AUTO_HOST_EN$" "1"
+    LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADHOST.PBT"
+ENDIF
+
+IF EQU "$BM.CNF_AUTO_FTPD_EN$" "1"
+    LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADFTPD.PBT"
+ENDIF
+
 # Theme related init.
 ECHO "Loading Theme..."
 
@@ -83,33 +96,6 @@ ENDIF
 
 ECHO "Loading theme configuration..."
 LOADEXEC "PBAT" "$BM.BM_PATH$/CONFIG/THMCONF.PBT"
-
-# Network related init.
-IF EQU "$BM.CNF_AUTO_NET_EN$" "1"
-    LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADNET.PBT"
-ENDIF
-
-IF EQU "$BM.CNF_AUTO_HOST_EN$" "1"
-    LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADHOST.PBT"
-ENDIF
-
-IF EQU "$BM.CNF_AUTO_FTPD_EN$" "1"
-    LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADFTPD.PBT"
-ENDIF
-
-# HDD related init. Disables HDD for v14+ and hides HDD Menu in CONFMENU.PBT
-# This way the same config file can be used betweeen CC 1.x and 2.0 without having to change config file
-
-IF LT "$BM.BIOS_MAJOR_VER$$BM.BIOS_MINOR_VER$" "220"
-    IF EQU "$BM.CNF_AUTO_HDD_EN$" "1"
-        LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADHDD.PBT"
-    ENDIF
-ENDIF
-
-# MMCE related init.
-IF EQU "$BM.CNF_AUTO_MMCE_EN$" "1"
-    LOADEXEC "PBAT" "$BM.SCRIPTS$/LOADMMCE.PBT"
-ENDIF
 
 # Load saved app settings
 IF EXISTS "$BM.BM_PATH$/CONFIG/APPCNF.PBT"
